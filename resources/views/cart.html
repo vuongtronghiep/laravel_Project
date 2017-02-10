@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    
+<!-- Tieu Long Lanh Kute -->
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Rammus</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Fonts======================= -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+		
+		<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700italic,700,400italic' rel='stylesheet' type='text/css'>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<!-- countdown.css ======================== -->
+        <link rel="stylesheet" href="css/jquery.countdown.css">
+		<!-- Bootstrap CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- Mobile Menu Slicknav CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/slicknav.css">
+		<!-- Font-awesome CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- rs-plugin CSS
+		============================================ -->			
+		<link href="lib/rs-plugin/css/settings.css" rel="stylesheet" />	
+		
+		<!-- owl.carousel CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+		
+		<!-- FILTER_PRICE CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
+		
+		<!-- normalize CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/normalize.css">
+		<!-- main CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/main.css">
+		<!-- Style CSS
+		============================================ -->
+        <link rel="stylesheet" href="style.css">
+		<!-- Responsive CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/responsive.css">
+		<!-- modernizr js
+		============================================ -->
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+		
+    </head>
+    <body class="cart home_2">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+		
+		
+		<!--HEADER AREA START-->
+		<header>
+		<div class="header-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+					<!--HEADER-TOP-MENU LEFT START-->
+						<div class="header-top-menu">
+							<nav>
+								<ul>
+									<li><a href="#"><img src="img/flag.png" alt="" /><span><i class="fa fa-angle-down"></i></span></a>
+										<ul class="sup-menu">
+											<li><a href="#"><img src="img/country/it.gif" alt="" />italiano</a></li>
+											<li><a href="#"><img src="img/country/nl_nl.gif" alt="" />Nederlands</a></li>
+											<li><a href="#"><img src="img/country/de_de.gif" alt="" />Deutsch</a></li>
+											<li><a href="#"><img src="img/country/he_il.gif" alt="" /> עברית</a></li>
+											<li><a href="#"><img src="img/country/en.gif" alt="" />English</a></li>
+										</ul>
+									</li>
+									<li><a href="#"><i class="fa fa-usd"></i><span><i class="fa fa-angle-down"></i></span></a>
+										<ul class="sup-menu currency">
+											<li><a href="#"><i class="fa fa-eur"></i></a></li>
+											<li><a href="#"><i class="fa fa-rub"></i></a></li>
+											<li><a href="#"><i class="fa fa-krw"></i></a></li>
+											<li><a href="#"><i class="fa fa-gbp"></i></a></li>
+											<li><a href="#"><i class="fa fa-inr"></i></a></li>
+										</ul>
+									</li>
+									<li><a href="#"><i class="fa fa-user"></i><span><i class="fa fa-angle-down"></i></span></a>
+										<ul class="sup-menu">
+											<li><a href="#">Profile</a></li>
+											<li><a href="#">Logout</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<!--HEADER-TOP-MENU-LEFT END-->
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+						<!--HEADER-TOP-MENU-RIGHT START-->
+						<div class="header-top-right">
+							<div class="heder-right-menu">
+							<nav>
+								<ul>
+									<li><a href="category_grid.html"><span><i class="fa fa-align-justify"></i></span>All Category <span class="dropdown"><i class="fa fa-angle-down"></i></span></a>
+										<ul>
+											<li><a href="category_grid.html">Mens</a></li>
+											<li><a href="category_grid.html">Womens</a></li>
+											<li><a href="category_grid.html">Bag</a></li>
+											<li><a href="category_grid.html">Digital Camera</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+							</div>
+							<div class="form-and-cart">
+								<form action="#">
+									<input type="text" placeholder="Search..."/>
+									<span class="search-button"><i class="fa fa-search"></i></span>
+								</form>
+								<div class="cart-empty shopping_cart">
+									<a href="#"><i class="fa fa-shopping-cart"></i></a>
+									<!-- CART-PRODUCT-LIST START-->
+									<div class="cart-product-list">
+										<div class="mini-cart-content">
+											<div class="cart-img-details">											
+												<div class="cart-img-photo">
+													<a href="#"><img src="img/cart_list_prod.jpg" alt="" /></a>
+													<span class="quantity">1</span>
+												</div>
+												<div class="cart-img-contaent">
+													<a href="#"><h4>Vestibulum et mollis nunc</h4></a>
+													<span>$120.00</span>
+												</div>
+												<div class="pro-del"><a href="#"><i class="fa fa-times-circle"></i></a></div>
+											</div>
+											<div class="clear"></div>
+											<div class="cart-img-details">											
+												<div class="cart-img-photo">
+													<a href="#"><img src="img/cart_list_prod_2.jpg" alt="" /></a>
+													<span class="quantity">1</span>
+												</div>
+												<div class="cart-img-contaent">
+													<a href="#"><h4>Aenean eu tristique</h4></a>
+													<span>$170.00</span>
+												</div>
+												<div class="pro-del"><a href="#"><i class="fa fa-times-circle"></i></a></div>
+											</div>
+											<p class="total">Subtotal: <span class="amount">$290.00</span></p>
+											<div class="clear"></div>
+											<p class="cart-button-top"><a href="checkout.html">Checkout</a></p>
+										</div>
+									</div>
+									<!-- CART-PRODUCT-LIST END-->
+								</div>
+							</div>
+						</div>
+						<!--HEADER-TOP-MENU-RIGHT END-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--HEADER AREA TOP END-->
+		
+		<!--MAINMENU AREA START-->
+		<div class="mainmenu-area">
+			<div class="container">
+				<div class="main-menu">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12">
+							<div class="row">							
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+									<!--LOGO AREA START-->
+									<div class="logo">
+										<a href="index.html"><img src="img/logo-3.png" alt="" /></a>
+									</div>
+									<!--LOGO AREA END-->
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-8">
+								<!--MAINMENU START-->
+									<div class="mainmenu">
+										<nav>
+											<ul id="nav">
+												<li class="current"><a href="index.html"><span><i class="fa fa-home"></i></span>Home <i class="fa fa-arrow-circle-o-right"></i></a>
+													<ul class="sub-menu">
+														<li><a href="index-2.html">Home page 2</a></li>
+														<li><a href="index-3.html">Home page 3</a></li>
+													</ul>
+												</li>
+												<li><a href="#"><span><i class="fa fa-briefcase"></i></span>About</a></li>
+												<li><a href="blog_sidebar.html"><span><i class="fa fa-pencil-square-o"></i></span>Blogs <i class="fa fa-arrow-circle-o-right"></i></a>
+													<ul class="sub-menu">
+														<li><a href="blog_sidebar.html">Blog With Sidebar</a></li>
+														<li><a href="blog_no_sidebar.html">Blog With Out Sidebar</a></li>
+														<li><a href="blog_details.html">Blog details page</a></li>
+													</ul>
+												</li>
+												<li><a href="category_grid.html"><span><i class="fa fa-shopping-cart"></i></span>Shop <i class="fa fa-arrow-circle-o-right"></i></a>
+													<div class="mega-menu">
+														<div class="single-mega-menu">
+															<h3 class="hedding-border">Shop Categories</h3>
+															<a href="category_grid.html"><i class="fa fa-arrow-circle-o-right"></i>Men</a>
+															<a href="category_grid.html"><i class="fa fa-arrow-circle-o-right"></i>Women</a>
+															<a href="category_grid.html"><i class="fa fa-arrow-circle-o-right"></i>Shoes</a>
+															<a href="category_grid.html"><i class="fa fa-arrow-circle-o-right"></i>Bags</a>
+															<a href="category_grid.html"><i class="fa fa-arrow-circle-o-right"></i>Accessories</a>
+															<a href="category_grid.html"><i class="fa fa-arrow-circle-o-right"></i>Clothings</a>
+														</div>
+														<div class="single-mega-menu">
+															<h3 class="hedding-border midle">Shop Variants</h3>
+															<a href="category_grid.html"><i class="fa fa-arrow-circle-o-right"></i>Shop full width</a>
+															<a href="category_grid.html"><i class="fa fa-arrow-circle-o-right"></i>Shop sidebar right</a>
+															<a href="category_grid.html"><i class="fa fa-arrow-circle-o-right"></i>Shop sidebar left</a>
+															<a href="category_grid.html"><i class="fa fa-arrow-circle-o-right"></i>Sategory listing</a>
+															<a href="product_details.html"><i class="fa fa-arrow-circle-o-right"></i>Products detail</a>
+														</div>
+														<div class="single-mega-menu">
+															<h3 class="hedding-border left-border">Page</h3>
+															<a href="checkout.html"><i class="fa fa-arrow-circle-o-right"></i>Checkout</a>
+															<a href="cart.html"><i class="fa fa-arrow-circle-o-right"></i>Cart</a>
+															<a href="#"><i class="fa fa-arrow-circle-o-right"></i>My account</a>
+															<a href="#"><i class="fa fa-arrow-circle-o-right"></i>Order tracking</a>
+														</div>
+													</div>
+												</li>
+												<li><a href="category_list.html"><span><i class="fa fa-leaf"></i></span>Featured</a></li>
+												<li><a href="contact_us.html"><span><i class="fa fa-envelope"></i></span>Contact</a></li>
+											</ul>						
+										</nav>
+									</div>
+									<!--MAINMENU END-->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- MOBILE-MENU START-->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="mobile-menu">
+								<ul id="mobile-menu">
+									<li><a href="index.html">Home</a>
+										<ul>
+											<li><a href="index-2.html">Home page 2</a></li>
+											<li><a href="index-3.html">Home page 3</a></li>
+										</ul>
+									</li>
+									<li><a href="#">About</a></li>
+									<li><a href="blog_sidebar.html">Blogs</a>
+										<ul>
+											<li><a href="blog_sidebar.html">Blog With Sidebar</a></li>
+											<li><a href="blog_no_sidebar.html">Blog With Out Sidebar</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Shop</a>
+										<ul>
+											<li><a href="#">Men</a></li>
+											<li><a href="#">Women</a></li>
+											<li><a href="#">Shoes</a></li>
+											<li><a href="#">Bags</a></li>
+											<li><a href="#">Accessories</a></li>
+											<li><a href="#">Clothings</a></li>
+											<li><a href="#">Shop full width</a></li>
+											<li><a href="#">Shop sidebar right</a></li>
+											<li><a href="#">Shop sidebar left</a></li>
+											<li><a href="#">Sategory listing</a></li>
+											<li><a href="product_details.html">Products detail</a></li>
+											<li><a href="#">Checkout</a></li>
+											<li><a href="cart.html">Cart</a></li>
+											<li><a href="#">My account</a></li>
+											<li><a href="#">Order tracking</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Featured</a></li>
+									<li><a href="contact_us.html">Contact</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- MOBILE-MENU END-->
+				</div>
+			</div>
+		</div>
+		<!--MAINMENU AREA END-->
+		</header>
+		<!--HEADER AREA END-->
+		
+		<!--MENU-BOTTOM START-->
+		<div class="menu-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-lg-12">
+						<div class="category-gird-menu">
+							<nav>
+								<ul>
+									<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+									<li><a class="active-current" href="#">Cart</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--MENU-BOTTOM END-->
+		
+		<!-- CART_LIST_AREA START-->
+		<div class="cart_list_area">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="single_cart_list table-responsive">
+							<table class="table">
+								<tr>
+									<th class="delete_icon"></th>
+									<th class="c_prod_images">Image</th>
+									<th class="c_prod_name">Product Name</th>
+									<th class="c_edit_button">Edit</th>
+									<th class="c_qnt">Quantity</th>
+									<th class="sub_total">Subtotal</th>
+									<th class="grand_total">Grandtotal</th>
+								</tr>
+								<tr>
+									<td><a href="#"><i class="fa fa-trash-o"></i></a></td>
+									<td><img src="img/cart_list.jpg" alt="Cart" /></td>
+									<td>
+										<p class="prod_name"><a href="#">Et harum quidem rerum</a></p><p>Size: 42</p><p>Color: Red</p>
+									</td>
+									<td><a href="#">Edit</a></td>
+									<td><input type="number" name="number" value="1"/></td>
+									<td><span class="cart_price">$69.00</span></td>
+									<td><span class="cart_price">$69.00</span></td>
+								</tr>
+								<tr>
+									<td><a href="#"><i class="fa fa-trash-o"></i></a></td>
+									<td><img src="img/cart_list_2.jpg" alt="Cart" /></td>
+									<td>
+										<p class="prod_name"><a href="#">Et harum quidem rerum</a></p><p>Size: 42</p><p>Color: Red</p>
+									</td>
+									<td><a href="#">Edit</a></td>
+									<td><input type="number" name="number" value="1"/></td>
+									<td><span class="cart_price">$69.00</span></td>
+									<td><span class="cart_price">$69.00</span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="total_subtotal_area">
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+							<div class="total_subtotal">
+								<div class="total_subtotal_amount">
+									<div class="subtotal">
+										<span>Subtotal:</span>
+										<span class="amount">$69.00</span>
+									</div>
+									<div class="total">
+										<span>Grandtotal:</span>
+										<span class="amount">$69.00</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- CART_LIST_AREA END-->
+		
+		<!-- CLIENT_REQUEST_AREA START-->
+		<div class="client_request_area">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<div class="shopping_text">
+							<h2>Estimate Shipping and Tax</h2>
+							<p>Enter your destination to get shipping & tax</p>
+							<table>
+								<tr>
+									<td>Country*</td>
+									<td>
+										<select name="Country">
+											<option value="0">Select options</option>
+											<option value="0">Bangladesh</option>
+											<option value="0">Australia</option>
+											<option value="0">United States of America</option>
+											<option value="0">Canada</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>State/ Province*</td>
+									<td>
+										<select name="State">
+											<option value="0">Select options</option>
+											<option value="0">Dhaka</option>
+											<option value="0">Delhi</option>
+											<option value="0">Ski Canada</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>Zip/ postal code</td>
+									<td>
+										<select name="postal">
+											<option value="0">Select options</option>
+											<option value="0">1120</option>
+											<option value="0">1650</option>
+											<option value="0">1020</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><input type="button" value="Get a quote"></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 hidden-sm">
+						<div class="discount_code">
+							<h2>Discount Code</h2>
+							<form action="#">
+								<span class="input-code">
+									<input type="text" name="Code">
+								</span>
+								<input type="button" value="Apply coupon">
+							</form>
+							<p>Enter your coupon code if you have one</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<div class="button_area">
+							<a class="button" href="#">procced to checkout</a>
+							<p><a href="#">Checkout with multiples address</a></p>
+							<a class="button" href="#">continue shopping</a>
+							<a class="button" href="#">update shopping cart</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- CLIENT_REQUEST_AREA END-->
+		
+		<!-- LOGO-BAND-AREA START-->
+		<div class="logo-band-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 logo-band">
+						<h3 class="area-heading">Logo Brands</h3>
+						<div class="logo-area">
+							<!-- SINGLE-LOGO START-->
+							<div class="single-logo">
+								<a href="#">
+									<div class="logo-pic">
+										<img src="img/logo_band/logo_1.png" alt="Logo" />
+									</div>
+								</a>
+							</div>
+							<!-- SINGLE-LOGO END-->
+							<!-- SINGLE-LOGO START-->
+							<div class="single-logo">
+								<a href="#">
+									<div class="logo-pic">
+										<img src="img/logo_band/logo_2.png" alt="Logo" />
+									</div>
+								</a>
+							</div>
+							<!-- SINGLE-LOGO END-->
+							<!-- SINGLE-LOGO START-->
+							<div class="single-logo">
+								<a href="#">
+									<div class="logo-pic">
+										<img src="img/logo_band/logo_3.png" alt="Logo" />
+									</div>
+								</a>
+							</div>
+							<!-- SINGLE-LOGO END-->
+							<!-- SINGLE-LOGO START-->
+							<div class="single-logo">
+								<a href="#">
+									<div class="logo-pic">
+										<img src="img/logo_band/logo_4.png" alt="Logo" />
+									</div>
+								</a>
+							</div>
+							<!-- SINGLE-LOGO END-->
+							<!-- SINGLE-LOGO START-->
+							<div class="single-logo">
+								<a href="#">
+									<div class="logo-pic">
+										<img src="img/logo_band/logo_5.png" alt="Logo" />
+									</div>
+								</a>
+							</div>
+							<!-- SINGLE-LOGO END-->
+							<!-- SINGLE-LOGO START-->
+							<div class="single-logo">
+								<a href="#">
+									<div class="logo-pic">
+										<img src="img/logo_band/logo_2.png" alt="Logo" />
+									</div>
+								</a>
+							</div>
+							<!-- SINGLE-LOGO START-->
+							<div class="single-logo">
+								<a href="#">
+									<div class="logo-pic">
+										<img src="img/logo_band/logo_1.png" alt="Logo" />
+									</div>
+								</a>
+							</div>
+							<!-- SINGLE-LOGO START-->
+							<div class="single-logo">
+								<a href="#">
+									<div class="logo-pic">
+										<img src="img/logo_band/logo_3.png" alt="Logo" />
+									</div>
+								</a>
+							</div>
+							<!-- SINGLE-LOGO START-->
+							<div class="single-logo">
+								<a href="#">
+									<div class="logo-pic">
+										<img src="img/logo_band/logo_5.png" alt="Logo" />
+									</div>
+								</a>
+							</div>
+							<!-- SINGLE-LOGO START-->
+							<div class="single-logo">
+								<a href="#">
+									<div class="logo-pic">
+										<img src="img/logo_band/logo_3.png" alt="Logo" />
+									</div>
+								</a>
+							</div>
+							<!-- SINGLE-LOGO END-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- LOGO-BAND-AREA END-->
+		
+		<!-- FOOTER-AREA START-->
+		<div class="footer-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12">
+						<div class="footer">
+							<div class="row">
+								<div class="col-lg-3 col-md-3 col-sm-5">
+									<!-- FOOTER-LOGO START-->
+									<div class="footer-logo">
+										<a href="index.html"><img alt="" src="img/logo_footer_1.png"></a>
+										<p>Vestibulum gravida magna ut commodo lacinia. Quisque dictum in arcu ut vestibulum. Morbi sed tempor lacus...  <a href="#">Readmore>></a></p>
+									</div>
+									<!-- FOOTER-LOGO END-->
+								</div>
+								<div class="col-lg-3 col-md-3 col-sm-4 hidden-sm">
+									<!-- INFORMATION START-->
+									<div class="information">
+										<h3>Infomation</h3>
+										<ul>
+											<li>
+												<a href="#">
+													<span><i class="fa fa-arrow-circle-o-right"></i></span>
+													Specials
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span><i class="fa fa-arrow-circle-o-right"></i></span>
+													New products
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span><i class="fa fa-arrow-circle-o-right"></i></span>
+													Best sellers
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span><i class="fa fa-arrow-circle-o-right"></i></span>
+													Our stores
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span><i class="fa fa-arrow-circle-o-right"></i></span>
+													Contact us
+												</a>
+											</li>
+										</ul>
+									</div>
+									<!-- INFORMATION END-->
+								</div>
+								<div class="col-lg-3 col-md-3 col-sm-3">
+								<!-- MYACCOUNT START-->
+									<div class="myaccount">
+										<h3>My Account</h3>
+										<ul>
+											<li>
+												<a href="#">
+													<span><i class="fa fa-arrow-circle-o-right"></i></span>
+													My orders
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span><i class="fa fa-arrow-circle-o-right"></i></span>
+													My credit slips
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span><i class="fa fa-arrow-circle-o-right"></i></span>
+													My addresses
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<span><i class="fa fa-arrow-circle-o-right"></i></span>
+													My personal info
+												</a>
+											</li>
+										</ul>
+									</div>
+									<!-- MYACCOUNT END-->
+								</div>
+								
+								<!-- JOIN-US AREA START-->
+								<div class="col-lg-3 col-md-3 col-sm-4">
+									<div class="join-us">
+										<h3>Join us</h3>
+										<span>Follow with us now!</span>
+									</div>
+									<div class="social-icon">
+										<ul>
+											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+											<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+											<li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+											<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<!-- JOIN-US AREA END-->
+							</div>
+							<!-- ROW END-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- FOOTER-AREA START-->
+		<div class="footer-bottum-menu-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12">
+						<div class="footer-bottum">
+							<div class="row">
+								<div class="col-lg-6 col-md-6">
+									<!-- FOOTER-BOTTUM-MENU START-->
+									<div class="footer-bottum-menu">
+										<ul>
+											<li><a href="#">Our stores</a></li>
+											<li><a href="#">Contact us</a></li>
+											<li><a href="#">Terms and conditions of use</a></li>
+											<li><a href="#">About us</a></li>
+											<li><a href="#">Sitemap</a></li>
+										</ul>
+									</div>
+									<!-- FOOTER-BOTTUM-MENU END-->
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<!-- CARD-AREA START-->
+									<div class="card-area">
+										<a href="#"><img src="img/paypal.png" alt="" /></a>
+										<a href="#"><img src="img/amazon.png" alt="" /></a>
+										<a href="#"><img src="img/skrill.png" alt="" /></a>
+										<a href="#"><img src="img/visa.png" alt="" /></a>
+										<a href="#"><img src="img/discover.png" alt="" /></a>
+										<a href="#"><img src="img/master.png" alt="" /></a>
+									</div>
+									<!-- CARD-AREA END-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- COPY-RIGHT START-->
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12">
+					<div class="copy-right">
+						<p>Copyright &copy; 2015 <a href="#">Rammustheme</a>. All Rights Reserved</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- COPY-RIGHT END-->
+		
+		<!-- jquery-1.11.3.min js -->
+        <script src="js/vendor/jquery-1.11.3.min.js"></script>
+		<!-- bootstrap.min js -->
+        <script src="js/bootstrap.min.js"></script>
+		<!-- FILTER_PRICE js -->
+        <script src="js/jquery-ui.min.js"></script>
+		<!-- owl.carousel.min js -->
+        <script src="js/owl.carousel.min.js"></script>
+		<!-- jquery.slicknav.min js -->
+        <script src="js/jquery.slicknav.min.js"></script>
+		<!-- plugins js -->
+        <script src="js/plugins.js"></script>
+		<!-- jquery.scrollUp js -->
+        <script src="js/jquery.scrollUp.min.js"></script>
+		<!-- Countdown JS-->
+		<script src="js/jquery.plugin.min.js"></script>
+		<script src="js/jquery.countdown.min.js"></script>
+		<!-- main JS -->
+		 <script src="js/main.js"></script>		 
+		 
+    </body>
+
+<!-- Tieu Long Lanh Kute -->
+</html>
