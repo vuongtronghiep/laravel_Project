@@ -91,8 +91,10 @@ class indexModel extends Model{
 				->get();
 	}
 
-
+	public function getParentCate(){
+		return DB::table('categories')
+					->get();
+	}
 }
-
 
 ?>

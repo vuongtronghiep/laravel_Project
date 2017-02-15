@@ -46,5 +46,6 @@ Route::get('/', ['as' =>'index','uses'=>'indexController@index']);
 Route::auth();
 Route::get('detail/{id}',['as' => 'detail','uses'=>'indexController@getDetail']);
 Route::get('view/{id}',['as' => 'quickview','uses'=>'indexController@quickview']);
+Route::get('category/{id}',['as' => 'category.view','uses'=>'indexController@detailCategory']);
 
 

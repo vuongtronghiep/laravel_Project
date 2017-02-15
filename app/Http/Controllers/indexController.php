@@ -23,6 +23,9 @@ class indexController extends Controller
     public function index()
     {
         $index = new indexModel();
+
+        $parent_cate1 = $index->getParentCate();
+        $data['parent_cate'] = json_decode(json_encode($parent_cate1), True);
         $cate1 = $index->cate();
         $data['cate'] = json_decode(json_encode($cate1), True);
         $pro = $index->getProductMan();
