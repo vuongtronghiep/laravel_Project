@@ -46,7 +46,8 @@ class Category extends Model
     public function search($name){
         return DB::table('categories')
                 ->join('category_parent', 'categories.parent_id', '=', 'category_parent.id_parent')
-                ->where('category_name','LIKE', '%'. $name .'%')
+                ->where('category_name','like', '%'. $name .'%')
+                ->orwhere('parent_name','like', '%'. $name .'%')
                 ->orderBy('id', 'desc');
     }
    

@@ -26,27 +26,34 @@
 		<table class="table table-hover">
 		    <thead>
 		      <tr>
-		        <th>ID</th>
-		        <th>Tên thể loại</th>
-		        <th>Tên thể cha</th>
-		        <th>Alias</th>
-		        <th colspan="2" style="margin-left:30px;"><a href="add"><img class="img-responsive" title="Thêm sản phẩm" src="{{ asset('public/image/add.png') }}" style="height:30px;width:30px;"></a></th>
+		        <th style="text-align: center;">Stt</th>
+		        <th style="text-align: center;">Tên thể loại</th>
+		        <th style="text-align: center;">Tên thể cha</th>
+		        <th style="text-align: center;">Alias</th>
+		        <th colspan="2" style="margin-left:30px; text-align: center;"><a href="add"><img class="img-responsive" title="Thêm sản phẩm" src="{{ asset('public/image/add.png') }}" style="height:30px;width:30px;"></a></th>
 		      </tr>
 		    </thead>
 		    <tbody>
-		
+			<?php $index = 1;?>
 		    @foreach($list1 as $category)
 		      <tr>
-		      	<td> {!!  @$category['id'] !!} </td>
-		        <td>  {!! @$category['category_name'] !!} </td>
-		        <td>  {!! @$category['parent_name'] !!} </td>		        
-		        <td>  {!! @$category['alias'] !!} </td>
-		        <td><a href="{!!  URL::route('admin.category.getEdit',@$category['id'])  !!}"><img  src="{{ asset('public/image/edit.png') }}" title="Sửa Thể Loại" style="height:30px;width:30px;"></a></td>
-		        <td><a href="{!!  URL::route('admin.category.delete',@$category['id'])  !!}" onclick="xacnhan()"><img  src="{{ asset('public/image/DeleteRed.png') }}" title="Xóa Thể Loại" style="height:30px;width:30px;"></a></td>
+		      	<td style="text-align: center;">  {!!  $index++ !!} </td>
+		        <td>  {!! @$category->category_name !!} </td>
+		        <td>  {!! @$category->parent_name !!} </td>		        
+		        <td>  {!! @$category->alias !!} </td>
+		        <td><a href="{!!  URL::route('admin.category.getEdit',@$category->id)  !!}"><img  src="{{ asset('public/image/edit.png') }}" title="Sửa Thể Loại" style="height:30px;width:30px;"></a></td>
+		        <td><a href="{!!  URL::route('admin.category.delete',@$category->id)  !!}" onclick="xacnhan()"><img  src="{{ asset('public/image/DeleteRed.png') }}" title="Xóa Thể Loại" style="height:30px;width:30px;"></a></td>
 		      </tr>
 		    @endforeach
 		    </tbody>
 	  </table>
+	</div>
+	<div class="row">
+	  	<div class="col-sm-8">
+	  		<div class="text-center">
+	  			{!! $list1->render() !!}
+	  		</div>
+	  	</div>
 	</div>
 	
 @endsection

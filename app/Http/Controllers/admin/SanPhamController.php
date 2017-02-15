@@ -164,12 +164,11 @@ class SanPhamController extends Controller
         if (Auth::check())
         {
             $pro1 =new Product();
-            $name = $request['name'];
-            $data['pro']  = $pro1->search($name)->get();
-            //$data['pro'] = json_decode(json_encode($result), True);
+            $name = $request['search'];
+            $data['pro']  = $pro1->search($name)->paginate(7);
             $data['countcate'] = $pro1->countCate();
             $data['countpro'] = $pro1->countPro();
-            return view('admin.sanpham.timkiem',$data);
+            return view('admin.sanpham.timkiem', $data);
         }else{
             return redirect()->route('admin.get');
         } 

@@ -20,7 +20,7 @@
 		<table class="table table-hover">
 		    <thead>
 		      <tr>
-		        <th>ID</th>
+		        <th>Stt</th>
 		        <th>Tên sản phẩm</th>
 		        <th>Tên thể loại</th>
 		        <th>Ảnh bìa</th>
@@ -35,9 +35,10 @@
 		      </tr>
 		    </thead>
 		    <tbody>
+		    <?php $index = 1; ?>
 		    @foreach($pro as $product)
 		      <tr style="text-align:center">
-		        <td>{!! $product->id !!}</td>
+		        <td>{!! $index ++ !!}</td>
 		        <td>{!! $product->product_name !!}</td>
 		        <td>{!! $product->category_name !!}</td>
 		        <td><img src="{!! asset('resources/upload/'.$product->image) !!}"></td>
@@ -56,4 +57,5 @@
 		    </tbody>
 	  </table>
 	</div>
+	{!! $pro->render() !!}
 @endsection

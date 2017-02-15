@@ -38,9 +38,14 @@
 				
 				<div class="row">
 					<div class="col-md-2 col-md-offset-4">
-				    	<button type="reset" class="btn btn-danger"><span class="glyphicon glyphicon-minus-sign"></span> Nhập Lại</button></div>
-				    <div class="col-md-4">
-				    	<button type="submit" class="btn btn-success" name="themmoi"><span class="glyphicon glyphicon-plus-sign"></span> Sửa</button></div>
+				    	<button type="reset" class="btn btn-danger"><span class="glyphicon glyphicon-minus-sign"></span> Nhập Lại</button>
+				    </div>
+				    <div class="col-md-2">
+				    	<button type="submit" class="btn btn-success" name="themmoi"><span class="glyphicon glyphicon-plus-sign"></span> Sửa</button>
+				    </div>
+				    <div class="col-md-2">
+				    	<a class="btn btn-success" href="{!! URL::route('admin.category.list')  !!}" name="huy"><span class="glyphicon glyphicon-forward"></span> Hủy bỏ</a>
+				    </div>
 				</div>
 		</fieldset>
 	</form>

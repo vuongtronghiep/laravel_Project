@@ -90,9 +90,14 @@
 				</div>
 				<div class="row">
 					<div class="col-md-2 col-md-offset-4">
-				    	<button type="reset" class="btn btn-danger"><span class="glyphicon glyphicon-minus-sign"></span> Nhập Lại</button></div>
-				    <div class="col-md-4">
-				    	<button type="submit" class="btn btn-success" name="themmoi" value="themmoi"><span class="glyphicon glyphicon-plus-sign"></span> Sửa</button></div>
+				    	<button type="reset" class="btn btn-danger"><span class="glyphicon glyphicon-minus-sign"></span> Nhập Lại</button>
+				    </div>
+				    <div class="col-md-2">
+				    	<button type="submit" class="btn btn-success" name="themmoi" value="themmoi"><span class="glyphicon glyphicon-plus-sign"></span> Sửa</button>
+				    </div>
+				    <div class="col-md-2">
+				    	<a href="{!!  URL::route('admin.product.list')  !!}" class="btn btn-success" name="huy" value="themmoi"><span class="glyphicon glyphicon-forward"></span> Hủy bỏ</a>
+				    </div>
 				</div>
 		</fieldset>
 	</form>

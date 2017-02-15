@@ -33,11 +33,12 @@ class TheLoaiController extends Controller
         {
             $cate =new Category();
             $name = $request['name'];
-            $result = $cate->search($name)->get();
-            $data['list1'] = json_decode(json_encode($result), True);
+            $data['list1'] = $cate->search($name)->paginate(10);
+            /*var_dump($data);exit();
+            $data['list1'] = json_decode(json_encode($result), True);*/
             $data['countcate'] = $cate->countCate();
             $data['countpro'] = $cate->countPro();
-            return view('admin.theloai.timkiem',$data);
+            return view('admin.theloai.timkiem', $data);
         }else{
             return redirect()->route('admin.get');
         }

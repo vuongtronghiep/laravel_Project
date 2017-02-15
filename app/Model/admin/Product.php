@@ -47,7 +47,8 @@ class Product extends Model
     public function search($name){
         return DB::table('product')
                 ->join('categories', 'categories.id', '=', 'product.category_id')
-                ->where('category_name','LIKE', '%'. $name .'%')
+                ->where('product_name','like', '%'. $name .'%')
+                ->orwhere('category_name','like', '%'. $name .'%')
                 ->orderBy('product.id', 'desc');
     }
 }
