@@ -55,6 +55,7 @@
 	<!--end left-menu and slider-->	
 	<!--Main-->
 	@yield('main')
+	@include('layouts.footer')
 	<!--end main-->
 	<!-- thư viện js-->
 	@include('layouts.lib')

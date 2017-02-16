@@ -95,6 +95,16 @@ class indexModel extends Model{
 		return DB::table('categories')
 					->get();
 	}
+
+	public function getProductInCategory ($id) {
+		return DB::table('product')
+				->join('categories', 'categories.id', '=', 'product.category_id')
+				->select('product.id','product_name','category_name','image','image_detail1','image_detail2','detail','price','view','size','sale','afterSale')
+				->orderBy('product.id','DESC')
+				->where('product.category_id','=',$id)
+				->take('18')
+				->get();
+	}
 }
 
 ?>

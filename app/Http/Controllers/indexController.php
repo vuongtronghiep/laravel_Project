@@ -6,6 +6,7 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Model\indexModel;
 use App\Model\admin\Product;
+use App\Model\admin\category;
 
 class indexController extends Controller
 {
@@ -78,5 +79,19 @@ class indexController extends Controller
         $new2 = $index->productNew2();
         $data['productNew2'] = json_decode(json_encode($new2), True);       
         return redirect()->route('quickview',$data);
+    }
+
+    public function detailCategory($id,Request $request) {
+        $index = new indexModel();
+
+        $product = $index->getProductInCategory($id);
+
+        $data['product'] = json_decode(json_encode($product), True);       
+        $parent_cate1 = $index->getParentCate();
+        $data['parent_cate'] = json_decode(json_encode($parent_cate1), True);
+        $cate1 = $index->cate();
+        $data['cate'] = json_decode(json_encode($cate1), True);
+
+        return view('category_grid', $data);
     }
 }
