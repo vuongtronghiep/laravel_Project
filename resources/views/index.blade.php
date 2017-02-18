@@ -249,9 +249,8 @@
 										<img src="{{ asset('public/back-end/img/add_mans.jpg')}}" alt="Mans" />
 									</div>
 									<div class="add-discription">
-										<p>the best your choise</p>
-										<h2>Shop’s men collection</h2>
-										<a href="#">Shop collection</a>
+										<p>Sự lựa chọn tốt nhất của bạn</p>
+										<h2>Nhiều bộ sưu tập khác nhau</h2>
 									</div>
 								</div>
 							</div>
@@ -269,61 +268,62 @@
 						<!-- TOP-CATEGORY-PRODUCT-AREA START-->
 						<div class="row men">
 							<h3 class="area-heading" style="margin-left: 10px">ĐỒ NAM</h3>
-							<div class="top-category-product-area">						
-								<!-- TOP-CATEGORY-SINGLE-PRODUCT START-->
+							<div class="featured-product-corusol">
 								@foreach($productMan as $new)
-
-								<div class="col-lg-3 col-md-3 col-sm-3">
-									<div class="single-featured-product">
-										<div class="product_img">
-											<a href="category_grid.html">
-												<img src="{{ asset('resources/upload/'.$new['image'])}}" alt="Category" class="primary-image"/>
-												<img src="{{ asset('resources/upload/'.$new['image_detail1'])}}" alt="Category" class="secondary-image"/>
-											</a>
-											<a class="modal-view" href="#" data-toggle="modal" data-target="#productModal">
-												<span class="quick-view">
-													<i class="fa fa-external-link"></i>Xem Luôn
-												</span>
-											</a>
-											<div class="add-cart-area">
-												<div class="fet-price">
-													<span class="addcart-text">{!! number_format(round(floor($new['afterSale']),-3)) !!}</span>
-													<span class="addcart-text-del">{!! number_format(round(floor($new['price']),-3)) !!}</span>
-												</div>
-												<div class="wish">
-													<a href="#" class="shopping-cart">
-														<i class="fa fa-shopping-cart"></i>
-													</a>
-													<a href="#" class="favourite">
-														<i class="fa fa-heart-o"></i>
-													</a>
+									<div class="col-lg-4">
+										<!--SINGLE-FEATURED-PRODUCT START-->
+										<div class="single-featured-product">
+											<div class="product_img">
+												<a href="product_details.html">
+													<img src="{{ asset('resources/upload/'. $new['image'])}}" alt="Special" class="primary-image"/>
+													<img src="{{ asset('resources/upload/'. $new['image_detail1'])}}" alt="Special" class="secondary-image"/>
+												</a>
+												<a class="modal-view" href="#" data-toggle="modal" data-target="#productModal">
+													<span class="quick-view">
+														<i class="fa fa-external-link"></i>Xem Luôn
+													</span>
+												</a>
+												<div class="add-cart-area">
+													<div class="fet-price">
+														<span class="addcart-text">{!! number_format(round(floor($new['afterSale']),-3)) !!}</span>
+														<span class="addcart-text-del">{!! number_format(round(floor($new['price']),-3)) !!}</span>
+													</div>
+													<div class="wish">
+														<a href="#" class="shopping-cart">
+															<i class="fa fa-shopping-cart"></i>
+														</a>
+														<a href="#" class="favourite">
+															<i class="fa fa-heart-o"></i>
+														</a>
+													</div>
 												</div>
 											</div>
+											<div class="infor-text">
+												<a href="product_details.html"><span>{!! $new['product_name'] !!}</span></a>
+												<span class="star">
+													<i class="fa fa-star active"></i>
+													<i class="fa fa-star active"></i>
+													<i class="fa fa-star active"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</span>
+											</div>
 										</div>
-										<div class="infor-text">
-											<a href="category_grid.html"><span>{!! $new['product_name'] !!}</span></a>
-											<span class="star">
-												<i class="fa fa-star active"></i>
-												<i class="fa fa-star active"></i>
-												<i class="fa fa-star active"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i><br><br>
-											</span>
-										</div>
+										
+										<!--SINGLE-FEATURED-PRODUCT END-->
 									</div>
+									@endforeach
 								</div>
-								<!-- TOP-CATEGORY-SINGLE-PRODUCT END-->
-								@endforeach
-							</div>
 							<!-- TOP-CATEGORY-PRODUCT-AREA END-->
-						<button type="button" class="btn btn-success btn-block"><span class="glyphicon glyphicon-hand-right"> Xem thêm</span></button>	<br><br>
+
+						<a href="{!! url('the-loai/1/do_nam') !!}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-hand-right"> Xem thêm</span></a>	<br><br>
 						<!-- TOP-CATEGORY-PRODUCT-AREA END-->
 						<h3 class="area-heading" style="margin-left: 10px">ĐỒ NỮ</h3>
-							<div class="top-category-product-area">						
+							<div class="featured-product-corusol">					
 								<!-- TOP-CATEGORY-SINGLE-PRODUCT START-->
 								@foreach($productWomen as $new)
 
-								<div class="col-lg-3 col-md-3 col-sm-3">
+								<div class="col-lg-4 col-md-4 col-sm-4">
 									<div class="single-featured-product">
 										<div class="product_img">
 											<a href="category_grid.html">
@@ -367,13 +367,13 @@
 
 							</div>
 							<!-- TOP-CATEGORY-PRODUCT-AREA END-->
-						<button type="button" class="btn btn-success btn-block"><span class="glyphicon glyphicon-hand-right"> Xem thêm</span></button>	<br><br>
+						<a href="{!! url('the-loai/2/do_nu') !!}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-hand-right"> Xem thêm</span></a>	<br><br>
 						<h3 class="area-heading a" style="margin-left: 10px">ĐỒ BÉ TRAI</h3>
-							<div class="top-category-product-area">						
+							<div class="featured-product-corusol">					
 								<!-- TOP-CATEGORY-SINGLE-PRODUCT START-->
 								@foreach($productBoy as $new)
 
-								<div class="col-lg-3 col-md-3 col-sm-3">
+								<div class="col-lg-4 col-md-4 col-sm-4">
 									<div class="single-featured-product">
 										<div class="product_img">
 											<a href="category_grid.html">
@@ -416,13 +416,13 @@
 								@endforeach
 							</div>
 							<!-- TOP-CATEGORY-PRODUCT-AREA END-->
-						<button type="button" class="btn btn-success btn-block"><span class="glyphicon glyphicon-hand-right"> Xem thêm</span></button>	<br><br>
+						<a href="{!! url('the-loai/3/do_be_trai') !!}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-hand-right"> Xem thêm</span></a>	<br><br>
 						<h3 class="area-heading" style="margin-left: 10px">ĐỒ BÉ GÁI</h3>
-							<div class="top-category-product-area">						
+							<div class="featured-product-corusol">					
 								<!-- TOP-CATEGORY-SINGLE-PRODUCT START-->
 								@foreach($productGirl as $new)
 
-								<div class="col-lg-3 col-md-3 col-sm-3">
+								<div class="col-lg-4 col-md-4 col-sm-4">
 									<div class="single-featured-product">
 										<div class="product_img">
 											<a href="category_grid.html">
@@ -465,7 +465,7 @@
 								@endforeach
 							</div>
 							<!-- TOP-CATEGORY-PRODUCT-AREA END-->
-							<button type="button" class="btn btn-success btn-block"><span class="glyphicon glyphicon-hand-right"> Xem thêm</span></button>	<br><br>
+							<a href="{!! url('the-loai/4/do_be_gai') !!}" class="btn btn-success btn-block"><span class="glyphicon glyphicon-hand-right"> Xem thêm</span></a>	<br><br>
 						</div>
 						</div>
 					</div>

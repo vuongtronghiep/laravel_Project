@@ -5,12 +5,21 @@
 	<div class="main-menu">
 		<div class="row men" style="padding-top: 10px;">
 		<div class="col-sm-12">
-			@foreach($product as $item)
-				<h3 class="area-heading"><a href="">Trang chủ </a> > {!! $item['category_name']!!}</h3> <?php break; ?>
+			@foreach($catego as $item)
+
+				<h3 class="area-heading"><a href="{!! URL::route('index') !!}">Trang chủ </a> >
+				@foreach($t as $i) 
+					@if( $item->id != $i->id )
+					 	<a href="{!! url('the-loai/'.$i->id.'/'.$i->alias) !!}"> {!! $i->category_name!!}</a>  > 
+					@endif
+				@endforeach
+				{!! $item->category_name!!}</h3> <?php break; ?>
+
 			@endforeach
 		</div>
 			<div class="row">
 				<div class="category-gird-product-area">
+				
 				@foreach($product as $item)
 					<div class="col-sm-3">
 						<!--SINGLE-FEATURED-PRODUCT START-->

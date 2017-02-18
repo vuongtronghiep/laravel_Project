@@ -84,8 +84,9 @@ class indexController extends Controller
     public function detailCategory($id,Request $request) {
         $index = new indexModel();
 
+        $data['t'] = $index->getParentCategory($id);
+        $data['catego'] = $index->getTitleCate($id);
         $product = $index->getProductInCategory($id);
-
         $data['product'] = json_decode(json_encode($product), True);       
         $parent_cate1 = $index->getParentCate();
         $data['parent_cate'] = json_decode(json_encode($parent_cate1), True);

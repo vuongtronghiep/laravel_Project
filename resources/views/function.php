@@ -3,7 +3,7 @@
 		echo "<ul>";
 		foreach ($data as $item) {
 			if($item["parent_id"] == $id) {
-				echo '<li><a href="category/'.$item['id'].'">'.$item['category_name'].'</a>';
+				echo '<li><a href="../../the-loai/'.$item['id'].'/'.$item['alias'].'">'.$item['category_name'].'</a>';
 				echo '</li>';
 			}
 		}

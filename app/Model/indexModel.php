@@ -16,17 +16,15 @@ class indexModel extends Model{
 				->select('product.id','product_name','category_name','image','image_detail1','image_detail2','detail','price','view','size','sale','afterSale')				
 				->orderBy('product.id', 'desc')
 				->where('parent_id','=','1')
-				->take('4')
 				->get();
 	}
 	public function getProductWomen(){
 		return DB::table('product')
-				->select('')
 				->join('categories', 'categories.id', '=', 'product.category_id')
 				->select('product.id','product_name','category_name','image','image_detail1','image_detail2','detail','price','view','size','sale','afterSale')				
 				->orderBy('product.id', 'desc')
 				->where('parent_id','=','2')
-				->take('4')
+				->orwhere('product.category_id','=','2')
 				->get();
 	}
 	public function getProductBoy(){
@@ -35,7 +33,6 @@ class indexModel extends Model{
 				->select('product.id','product_name','category_name','image','image_detail1','image_detail2','detail','price','view','size','sale','afterSale')				
 				->orderBy('product.id', 'desc')
 				->where('parent_id','=','3')
-				->take('4')
 				->get();
 	}
 	public function getProductGirl(){
@@ -44,7 +41,7 @@ class indexModel extends Model{
 				->select('product.id','product_name','category_name','image','image_detail1','image_detail2','detail','price','view','size','sale','afterSale')				
 				->orderBy('product.id', 'desc')
 				->where('parent_id','=','4')
-				->take('4')
+				->orwhere('product.category_id','=','4')
 				->get();
 	}
 
@@ -101,10 +98,29 @@ class indexModel extends Model{
 				->join('categories', 'categories.id', '=', 'product.category_id')
 				->select('product.id','product_name','category_name','image','image_detail1','image_detail2','detail','price','view','size','sale','afterSale')
 				->orderBy('product.id','DESC')
-				->where('product.category_id','=',$id)
-				->take('18')
+				->where('categories.parent_id','=', $id)
+				->orwhere('product.category_id','=', $id)
 				->get();
 	}
+
+	public function getTitleCate ($id) {
+		return DB::table('categories')
+			   ->where ('id', '=', $id)
+			   ->get();
+	}
+
+	public function getParentCategory ($id) {
+		return DB::table('categories')
+			   ->whereIn('id', function($query) use ($id){
+			   		$query->select('parent_id')
+			   			  ->from('categories')
+			   			  ->where('id', '=', $id)
+			   			  ->get();
+			   			  
+			   })
+			   ->get();
+	}
+
 }
 
 ?>

@@ -45,7 +45,7 @@
 								<ul>
 									@foreach($parent_cate as $parent_cat)
 										@if($parent_cat['parent_id'] == 0)
-											<li><a href="{!! URL::route('category.view', $parent_cat['id']) !!}">
+											<li><a href="{!! url('the-loai/'.$parent_cat["id"].'/'.$parent_cat["alias"]) !!}">
 											{!! $parent_cat["category_name"] !!}</a></li>
 										@endif
 									@endforeach

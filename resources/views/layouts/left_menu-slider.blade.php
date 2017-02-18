@@ -9,7 +9,8 @@
 						<ul>
 							@foreach($parent_cate as $prc)
 								@if($prc['parent_id'] == 0)
-									<li><a href="{!! URL::route('category.view', $prc['id']) !!}"><span><i class="fa fa-male"></i></span> {!! $prc["category_name"]!!}<span class="right-icon"><i class="fa fa-arrow-circle-o-right"></i></span></a>
+									<li>
+										<a href="{!! url('the-loai/'.$prc["id"].'/'.$prc["alias"]) !!}"><span><i class="fa fa-male"></i></span> {!! $prc["category_name"]!!}<span class="right-icon"><i class="fa fa-arrow-circle-o-right"></i></span></a>
 										<div class="category-mega-menu">
 											<span class="menu-text">
 												<?php subMenu($parent_cate, $prc['id']); ?>
