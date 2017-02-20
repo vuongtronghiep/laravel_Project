@@ -17,7 +17,7 @@
 										@foreach($seller as $seller)
 										<div class="single-featured-product">
 											<div class="product_img">
-												<a href="product_details.html">
+												<a href="{!! url('chi-tiet/'.$seller["id"].'/'.$seller["product_name"]) !!}">
 													<img src="{!! asset('resources/upload/'.$seller['image'])!!}" alt="Special" class="primary-image"/>
 													<img src="{{ asset('resources/upload/'.$seller['image_detail1'])}}" alt="Special" class="secondary-image"/>
 												</a>
@@ -69,7 +69,7 @@
 									<!-- SINGLE-SPECIAL-PRODUCT START-->
 										@foreach($special as $spe)
 										<div class="single-special-product">
-												<a href="product_details.html">
+												<a href="{!! url('chi-tiet/'.$spe['id'].'/'.$spe['product_name']) !!}">
 													<div class="product_img">
 														<img src="{{ asset('resources/upload/'. $spe['image'])}}" alt="Special" />
 													</div>
@@ -149,14 +149,9 @@
 										
 										<div class="single-featured-product">
 											<div class="product_img">
-												<a href="product_details.html">
+												<a href="{!! url('chi-tiet/'.$new['id'].'/'.$new['product_name']) !!}">
 													<img src="{{ asset('resources/upload/'. $new['image'])}}" alt="Special" class="primary-image"/>
 													<img src="{{ asset('resources/upload/'. $new['image_detail1'])}}" alt="Special" class="secondary-image"/>
-												</a>
-												<a class="modal-view" href="{!! url('view/'. $new['id']) !!}" data-toggle="modal" data-target="#productModal">
-													<span class="quick-view">
-														<i class="fa fa-external-link"></i>Xem Luôn
-													</span>
 												</a>
 												<div class="add-cart-area">
 													<div class="fet-price">
@@ -174,7 +169,7 @@
 												</div>
 											</div>
 											<div class="infor-text">
-												<a href="{{url('detail/'. $new['id'])}}"><span>{!! $new['product_name'] !!}</span></a>
+												<a href="{!! url('chi-tiet/'.$new['id'].'/'.$new['product_name']) !!}"><span>{!! $new['product_name'] !!}</span></a>
 												<span class="star">
 													<i class="fa fa-star active"></i>
 													<i class="fa fa-star active"></i>
@@ -196,14 +191,9 @@
 										
 										<div class="single-featured-product">
 											<div class="product_img">
-												<a href="product_details.html">
+												<a href="{!! url('chi-tiet/'.$new['id'].'/'.$new['product_name']) !!}">
 													<img src="{{ asset('resources/upload/'. $new['image'])}}" alt="Special" class="primary-image"/>
 													<img src="{{ asset('resources/upload/'. $new['image_detail1'])}}" alt="Special" class="secondary-image"/>
-												</a>
-												<a class="modal-view" href="#" data-toggle="modal" data-target="#productModal">
-													<span class="quick-view">
-														<i class="fa fa-external-link"></i>Xem Luôn
-													</span>
 												</a>
 												<div class="add-cart-area">
 													<div class="fet-price">
@@ -221,7 +211,7 @@
 												</div>
 											</div>
 											<div class="infor-text">
-												<a href="product_details.html"><span>{!! $new['product_name'] !!}</span></a>
+												<a href="{!! url('chi-tiet/'.$new['id'].'/'.$new['product_name']) !!}"><span>{!! $new['product_name'] !!}</span></a>
 												<span class="star">
 													<i class="fa fa-star active"></i>
 													<i class="fa fa-star active"></i>
@@ -274,14 +264,9 @@
 										<!--SINGLE-FEATURED-PRODUCT START-->
 										<div class="single-featured-product">
 											<div class="product_img">
-												<a href="product_details.html">
+												<a href="{!! url('chi-tiet/'.$new['id'].'/'.$new['product_name']) !!}">
 													<img src="{{ asset('resources/upload/'. $new['image'])}}" alt="Special" class="primary-image"/>
 													<img src="{{ asset('resources/upload/'. $new['image_detail1'])}}" alt="Special" class="secondary-image"/>
-												</a>
-												<a class="modal-view" href="#" data-toggle="modal" data-target="#productModal">
-													<span class="quick-view">
-														<i class="fa fa-external-link"></i>Xem Luôn
-													</span>
 												</a>
 												<div class="add-cart-area">
 													<div class="fet-price">
@@ -299,7 +284,7 @@
 												</div>
 											</div>
 											<div class="infor-text">
-												<a href="product_details.html"><span>{!! $new['product_name'] !!}</span></a>
+												<a href="{!! url('chi-tiet/'.$new['id'].'/'.$new['product_name']) !!}"><span>{!! $new['product_name'] !!}</span></a>
 												<span class="star">
 													<i class="fa fa-star active"></i>
 													<i class="fa fa-star active"></i>
@@ -326,14 +311,9 @@
 								<div class="col-lg-4 col-md-4 col-sm-4">
 									<div class="single-featured-product">
 										<div class="product_img">
-											<a href="category_grid.html">
+											<a href="{!! url('chi-tiet/'.$new['id'].'/'.$new['product_name']) !!}">
 												<img src="{{ asset('resources/upload/'.$new['image'])}}" alt="Category" class="primary-image"/>
 												<img src="{{ asset('resources/upload/'.$new['image_detail1'])}}" alt="Category" class="secondary-image"/>
-											</a>
-											<a class="modal-view" href="#" data-toggle="modal" data-target="#productModal">
-												<span class="quick-view">
-													<i class="fa fa-external-link"></i>Xem Luôn
-												</span>
 											</a>
 											<div class="add-cart-area">
 												<div class="fet-price">
@@ -351,7 +331,7 @@
 											</div>
 										</div>
 										<div class="infor-text">
-											<a href="category_grid.html"><span>{!! $new['product_name'] !!}</span></a>
+											<a href="{!! url('chi-tiet/'.$new['id'].'/'.$new['product_name']) !!}"><span>{!! $new['product_name'] !!}</span></a>
 											<span class="star">
 												<i class="fa fa-star active"></i>
 												<i class="fa fa-star active"></i>
@@ -376,14 +356,9 @@
 								<div class="col-lg-4 col-md-4 col-sm-4">
 									<div class="single-featured-product">
 										<div class="product_img">
-											<a href="category_grid.html">
+											<a href="{!! url('chi-tiet/'.$new['id'].'/'.$new['product_name']) !!}">
 												<img src="{{ asset('resources/upload/'.$new['image'])}}" alt="Category" class="primary-image"/>
 												<img src="{{ asset('resources/upload/'.$new['image_detail1'])}}" alt="Category" class="secondary-image"/>
-											</a>
-											<a class="modal-view" href="#" data-toggle="modal" data-target="#productModal">
-												<span class="quick-view">
-													<i class="fa fa-external-link"></i>Xem Luôn
-												</span>
 											</a>
 											<div class="add-cart-area">
 												<div class="fet-price">
@@ -401,7 +376,7 @@
 											</div>
 										</div>
 										<div class="infor-text">
-											<a href="category_grid.html"><span>{!! $new['product_name'] !!}</span></a>
+											<a href="{!! url('chi-tiet/'.$new['id'].'/'.$new['product_name']) !!}"><span>{!! $new['product_name'] !!}</span></a>
 											<span class="star">
 												<i class="fa fa-star active"></i>
 												<i class="fa fa-star active"></i>
@@ -425,14 +400,9 @@
 								<div class="col-lg-4 col-md-4 col-sm-4">
 									<div class="single-featured-product">
 										<div class="product_img">
-											<a href="category_grid.html">
+											<a href="{!! url('chi-tiet/'.$new['id'].'/'.$new['product_name']) !!}">
 												<img src="{{ asset('resources/upload/'.$new['image'])}}" alt="Category" class="primary-image"/>
 												<img src="{{ asset('resources/upload/'.$new['image_detail1'])}}" alt="Category" class="secondary-image"/>
-											</a>
-											<a class="modal-view" href="#" data-toggle="modal" data-target="#productModal">
-												<span class="quick-view">
-													<i class="fa fa-external-link"></i>Xem Luôn
-												</span>
 											</a>
 											<div class="add-cart-area">
 												<div class="fet-price">
@@ -450,7 +420,7 @@
 											</div>
 										</div>
 										<div class="infor-text">
-											<a href="category_grid.html"><span>{!! $new['product_name'] !!}</span></a>
+											<a href="{!! url('chi-tiet/'.$new['id'].'/'.$new['product_name']) !!}"><span>{!! $new['product_name'] !!}</span></a>
 											<span class="star">
 												<i class="fa fa-star active"></i>
 												<i class="fa fa-star active"></i>

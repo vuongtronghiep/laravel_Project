@@ -1,37 +1,10 @@
 <div class="header-area">
 	<div class="container">
-		<div class="row">
+		<div class="row" >
 			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 			<!--HEADER-TOP-MENU LEFT START-->
 				<div class="header-top-menu">
-					<nav>
-						<ul>
-							<li><a href="#"><img src="{{ asset('public/back-end/img/flag.png')}}" alt="" /><span><i class="fa fa-angle-down"></i></span></a>
-								<ul class="sup-menu">
-									<li><a href="#"><img src="{{ asset('public/back-end/img/country/it.gif')}}" alt="" />italiano</a></li>
-									<li><a href="#"><img src="{{ asset('public/back-end/img/country/nl_nl.gif')}}" alt="" />Nederlands</a></li>
-									<li><a href="#"><img src="{{ asset('public/back-end/img/country/de_de.gif')}}" alt="" />Deutsch</a></li>
-									<li><a href="#"><img src="{{ asset('public/back-end/img/country/he_il.gif')}}" alt="" /> עברית</a></li>
-									<li><a href="#"><img src="{{ asset('public/back-end/img/country/en.gif')}}" alt="" />English</a></li>
-								</ul>
-							</li>
-							<li><a href="#"><i class="fa fa-usd"></i><span><i class="fa fa-angle-down"></i></span></a>
-								<ul class="sup-menu currency">
-									<li><a href="#"><i class="fa fa-eur"></i></a></li>
-									<li><a href="#"><i class="fa fa-rub"></i></a></li>
-									<li><a href="#"><i class="fa fa-krw"></i></a></li>
-									<li><a href="#"><i class="fa fa-gbp"></i></a></li>
-									<li><a href="#"><i class="fa fa-inr"></i></a></li>
-								</ul>
-							</li>
-							<li><a href="#"><i class="fa fa-user"></i><span><i class="fa fa-angle-down"></i></span></a>
-								<ul class="sup-menu">
-									<li><a href="#">Thông tin cá nhân</a></li>
-									<li><a href="#">Đăng Xuất</a></li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
+					<a href="{!! URL::route('index') !!}"><img src="{{ asset('public/back-end/img/img-1411987595-7.jpg')}}" class="logo" /></a>
 				</div>
 				<!--HEADER-TOP-MENU-LEFT END-->
 			</div>

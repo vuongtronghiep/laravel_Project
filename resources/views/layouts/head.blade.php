@@ -46,6 +46,21 @@
 		<!-- modernizr js
 		============================================ -->
         <script src="{{asset('public/back-end/js/vendor/modernizr-2.6.2.min.js')}}"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script type="text/javascript">
+		$(function(){
+			$('input[type=checkbox]').filter(':first').prop('checked', true);
+			 $(window).bind("scroll", function(e) {
+		        var top = $(window).scrollTop();
+		      if (top> 10) { //Khoảng cách đã đo được
+		        $(".header-top-menu").addClass("aa");
+		      } else {
+		        $(".header-top-menu").removeClass("aa");
+
+		      } 
+		    });
+		});
+		</script>
 		<style type="text/css">
 			.area-heading{
 				color: blue;

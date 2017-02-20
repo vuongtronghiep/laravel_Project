@@ -301,4 +301,56 @@ textarea {
     h3 {
         page-break-after: avoid;
     }
+
+
+}
+.height70{
+    height: 70%;
+}
+
+.image_detail {
+    width: 350px;
+    height: 330px
+}
+.image_small_detail {
+     width: 84px;
+     height: 90px
+}
+.mrl15 {
+    width: 450px !important;
+    margin-left: 15px !important;
+    min-height: 430px;
+}
+.cate_image {
+    width: 350px !important;
+    height: 300px !important;
+}
+.inc_quentity{
+    margin-left: 5px !important;
+}
+.inline {
+    display: inline-flex;
+}
+.category_single_list {
+    min-height: 430px;
+}
+.category_prod_description {
+    min-height: 180px;
+    max-height: 180px;
+}
+.logo {
+    height: 60px;
+}
+.header-top-menu{
+    margin-top: -21px !important;
+}
+.te{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.aa{              
+    position: fixed;
+    left: 0px;
+    z-index: 10;
 }

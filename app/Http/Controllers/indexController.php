@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Model\indexModel;
 use App\Model\admin\Product;
 use App\Model\admin\category;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class indexController extends Controller
 {
@@ -56,29 +57,16 @@ class indexController extends Controller
         return view('product_details',$data);
     }
 
-    public function quickview($id){
+    public function detailProduct($id){
         $pro = new Product();
-        $data['detail']= Product::find($id); 
-         $index = new indexModel();
-        $cate1 = $index->cate();
-        $data['cate'] = json_decode(json_encode($cate1), True);
-        $pro = $index->getProductMan();
-        $data['productMan'] = json_decode(json_encode($pro), True);
-        $pro1 = $index->getProductWomen();
-        $data['productWomen'] = json_decode(json_encode($pro1), True);
-        $pro2 = $index->getProductBoy();
-        $data['productBoy'] = json_decode(json_encode($pro2), True);
-        $pro3 = $index->getProductGirl();
-        $data['productGirl'] = json_decode(json_encode($pro3), True);
-        $sel = $index->bestSeller();
-        $data['seller'] = json_decode(json_encode($sel), True);
-        $spe = $index->special();
-        $data['special'] = json_decode(json_encode($spe), True);
-        $new = $index->productNew();
-        $data['productNew'] = json_decode(json_encode($new), True);
-        $new2 = $index->productNew2();
-        $data['productNew2'] = json_decode(json_encode($new2), True);       
-        return redirect()->route('quickview',$data);
+        $index = new indexModel();
+
+        $data['product']= product::find($id); 
+        $parent_cate1 = $index->getParentCate();
+        $data['parent_cate'] = json_decode(json_encode($parent_cate1), True);
+        $data['relativeProduct'] = $index->getReativeProduct($id)->get();
+
+        return view('product_details', $data);
     }
 
     public function detailCategory($id,Request $request) {
@@ -86,8 +74,7 @@ class indexController extends Controller
 
         $data['t'] = $index->getParentCategory($id);
         $data['catego'] = $index->getTitleCate($id);
-        $product = $index->getProductInCategory($id);
-        $data['product'] = json_decode(json_encode($product), True);       
+        $data['product'] = $index->getProductInCategory($id)->paginate(12);
         $parent_cate1 = $index->getParentCate();
         $data['parent_cate'] = json_decode(json_encode($parent_cate1), True);
         $cate1 = $index->cate();

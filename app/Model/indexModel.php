@@ -99,8 +99,7 @@ class indexModel extends Model{
 				->select('product.id','product_name','category_name','image','image_detail1','image_detail2','detail','price','view','size','sale','afterSale')
 				->orderBy('product.id','DESC')
 				->where('categories.parent_id','=', $id)
-				->orwhere('product.category_id','=', $id)
-				->get();
+				->orwhere('product.category_id','=', $id);
 	}
 
 	public function getTitleCate ($id) {
@@ -119,6 +118,23 @@ class indexModel extends Model{
 			   			  
 			   })
 			   ->get();
+	}
+
+	public function getReativeProduct ($id) {
+		return DB::table('product')
+				->join('categories', 'categories.id', '=', 'product.category_id')
+				->select('product.id','product_name','category_name','image','image_detail1','image_detail2','detail','price','view','size','sale','afterSale','category_id','categories.parent_id')
+				->whereIn('category_id', function($query) use ($id){
+			   		$query->select('categories.id')
+			   			  ->from('categories')
+			   			  ->where('id', function($query1) use ($id){
+			   			 		$query1->select('category_id')
+			   			 			   ->from('product')
+			   			 			   ->join('categories', 'categories.id', '=', 'product.category_id')
+			   			 			   ->where('product.id', '=', $id);
+			   			  });
+			   			  
+			   });
 	}
 
 }

@@ -47,5 +47,6 @@ Route::auth();
 Route::get('detail/{id}',['as' => 'detail','uses'=>'indexController@getDetail']);
 Route::get('view/{id}',['as' => 'quickview','uses'=>'indexController@quickview']);
 Route::get('the-loai/{id}/{alias}',['as' => 'category.view','uses'=>'indexController@detailCategory']);
+Route::get('chi-tiet/{id}/{alias}',['as' => 'detail.view','uses'=>'indexController@detailProduct']);
 
 

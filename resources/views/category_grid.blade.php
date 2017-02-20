@@ -19,25 +19,20 @@
 		</div>
 			<div class="row">
 				<div class="category-gird-product-area">
-				
 				@foreach($product as $item)
 					<div class="col-sm-3">
 						<!--SINGLE-FEATURED-PRODUCT START-->
 						<div class="single-featured-product">
+						
 							<div class="product_img">
-								<a href="#">
-									<img src="{{ asset('resources/upload/'.$item['image']) }}" alt="Special" class="primary-image"/>
-									<img src="{{ asset('resources/upload/'.$item['image_detail1'])}}" alt="Special" class="secondary-image"/>
-								</a>
-								<a class="modal-view" href="#" data-toggle="modal" data-target="#productModal">
-									<span class="quick-view">
-										<i class="fa fa-external-link"></i> Xem nhanh
-									</span>
+								<a href="{!! url('chi-tiet/'.$item->id.'/'.$item->product_name) !!}">
+									<img src="{{ asset('resources/upload/'.$item->image) }}" alt="Special" class="primary-image"/>
+									<img src="{{ asset('resources/upload/'.$item->image_detail1)}}" alt="Special" class="secondary-image"/>
 								</a>
 								<div class="add-cart-area">
 									<div class="fet-price">
-										<span class="addcart-text">{!! number_format(round(floor($item['afterSale']),-3)) !!}vnđ</span>
-										<span class="addcart-text-del">{!! number_format(round(floor($item['price']),-3)) !!} vnđ</span>
+										<span class="addcart-text">{!! number_format(round(floor($item->afterSale),-3)) !!}vnđ</span>
+										<span class="addcart-text-del">{!! number_format(round(floor($item->price),-3)) !!} vnđ</span>
 									</div>
 									<div class="wish">
 										<a href="#" class="shopping-cart">
@@ -50,7 +45,7 @@
 								</div>
 							</div>
 							<div class="infor-text">
-								<a href="product_details.html"><span>{{ $item['product_name'] }}</span></a>
+								<a href="{!! url('chi-tiet/'.$item->id.'/'.$item->product_name) !!}"><span>{{ $item->product_name }}</span></a>
 								<span class="star">
 									<i class="fa fa-star active"></i>
 									<i class="fa fa-star active"></i>
@@ -70,12 +65,7 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12">
 					<div class="pagination-area">
-						<ul class="pagination">
-							<li><a href="#">1</a></li>
-							<li><a href="#" class="active_p">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-						</ul>
+						{!! $product->render() !!}
 					</div>
 				</div>
 			</div>
@@ -84,5 +74,7 @@
 			<!-- GIRD CATEGORY-FORM END-->
 	</div>					
 </div>
+</div>
+<div style="margin-bottom: 10px">
 </div>
 @endsection	
