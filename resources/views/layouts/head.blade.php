@@ -4,6 +4,7 @@
         <title>Thiên đường mua sắm</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
 		<!-- Fonts======================= -->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
@@ -46,21 +47,9 @@
 		<!-- modernizr js
 		============================================ -->
         <script src="{{asset('public/back-end/js/vendor/modernizr-2.6.2.min.js')}}"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script type="text/javascript">
-		$(function(){
-			$('input[type=checkbox]').filter(':first').prop('checked', true);
-			 $(window).bind("scroll", function(e) {
-		        var top = $(window).scrollTop();
-		      if (top> 10) { //Khoảng cách đã đo được
-		        $(".header-top-menu").addClass("aa");
-		      } else {
-		        $(".header-top-menu").removeClass("aa");
-
-		      } 
-		    });
-		});
-		</script>
+        
+        		 <script src="{{asset('public/back-end/js/vendor/jquery-3.1.1.min.js')}}"></script>
+        <script src="{{asset('public/back-end/js/ken.js')}}"></script>
 		<style type="text/css">
 			.area-heading{
 				color: blue;

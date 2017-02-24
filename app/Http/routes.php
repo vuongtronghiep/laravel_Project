@@ -48,5 +48,9 @@ Route::get('detail/{id}',['as' => 'detail','uses'=>'indexController@getDetail'])
 Route::get('view/{id}',['as' => 'quickview','uses'=>'indexController@quickview']);
 Route::get('the-loai/{id}/{alias}',['as' => 'category.view','uses'=>'indexController@detailCategory']);
 Route::get('chi-tiet/{id}/{alias}',['as' => 'detail.view','uses'=>'indexController@detailProduct']);
+Route::get('mua-hang/{id}/{alias}',['as' => 'buy.product','uses'=>'indexController@buyProduct']);
+Route::get('gio-hang',['as' => 'cart','uses'=>'indexController@cart']);
+Route::get('xoa-san-pham/{id}',['as' => 'delete.product.cart','uses'=>'indexController@deleteProductCart']);
+Route::get('cap-nhat/{id}/{qty}',['as' => 'update.product.cart','uses'=>'indexController@updateProductCart']);
 
 

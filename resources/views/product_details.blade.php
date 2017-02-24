@@ -69,14 +69,8 @@
 										</div>
 										
 									</div>
-									<div class="size inline">
-										<label>Số lượng * &nbsp;</label>
-										<div class="">
-											<input type="number" class="form-control" name="quentity" value="1"/>
-										</div>
-									</div>
 									<div class="category_prod_card_area">
-										<a href="#" class="cart">
+										<a href="{!! url('mua-hang/'.$product->id.'/'.$product->product_name) !!}" class="cart">
 											<i class="fa fa-shopping-cart"></i> Mua hàng
 										</a>
 										<a href="#" class="add-text-lis">

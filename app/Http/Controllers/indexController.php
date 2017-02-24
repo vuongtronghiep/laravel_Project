@@ -8,6 +8,7 @@ use App\Model\indexModel;
 use App\Model\admin\Product;
 use App\Model\admin\category;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Cart;
 
 class indexController extends Controller
 {
@@ -81,5 +82,35 @@ class indexController extends Controller
         $data['cate'] = json_decode(json_encode($cate1), True);
 
         return view('category_grid', $data);
+    }
+
+    public function buyProduct($id) {
+        $product = Product::find($id);
+        Cart::add(['id'=>$id, 'name'=>$product->product_name, 'qty'=>1, 'price'=>$product->afterSale, 'options'=>['image'=>$product->image] ]);
+        $content = Cart::content();
+
+        return redirect()->route('cart');
+    }
+
+    public function cart() {
+        $index = new indexModel();
+
+        $parent_cate1 = $index->getParentCate();
+        $data['parent_cate'] = json_decode(json_encode($parent_cate1), True);
+        $content = Cart::content();
+        $data['content'] = json_decode(json_encode($content), True);
+        $data['total'] = Cart::total();
+
+        return view('cart', $data);
+    }
+
+    public function deleteProductCart($id) {
+        Cart::remove($id);
+        return redirect()->route('cart');
+    }
+
+    public function updateProductCart($id, $qty ) {
+        Cart::update($id, $qty);
+        echo "Thành công";
     }
 }

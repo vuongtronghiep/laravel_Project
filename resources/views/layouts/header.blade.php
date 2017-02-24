@@ -4,7 +4,7 @@
 			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 			<!--HEADER-TOP-MENU LEFT START-->
 				<div class="header-top-menu">
-					<a href="{!! URL::route('index') !!}"><img src="{{ asset('public/back-end/img/img-1411987595-7.jpg')}}" class="logo" /></a>
+					<a href="{!! URL::route('index') !!}"><img src="{{ asset('public/back-end/img/img-1411987595-7.jpg')}}" class="logo" title="Trang chủ" /></a>
 				</div>
 				<!--HEADER-TOP-MENU-LEFT END-->
 			</div>
