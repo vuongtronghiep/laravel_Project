@@ -37,32 +37,37 @@
 							<!-- CART-PRODUCT-LIST START-->
 							<div class="cart-product-list">
 								<div class="mini-cart-content">
+								@foreach($content as $item)
 									<div class="cart-img-details">											
 										<div class="cart-img-photo">
-											<a href="#"><img src="{{ asset('public/back-end/img/cart_list_prod.jpg')}}" alt="" /></a>
-											<span class="quantity">1</span>
+											<a href="#">
+												<img src="{{ asset('resources/upload/'.$item['options']['image']) }}" alt="" />
+											</a>
+											<span class="quantity">{!! $item['qty'] !!}</span>
 										</div>
 										<div class="cart-img-contaent">
-											<a href="#"><h4>Vestibulum et mollis nunc</h4></a>
-											<span>$120.00</span>
+											<a href="#">
+												<h4>{!! $item['name'] !!}</h4>
+											</a>
+											<span>{!! number_format($item['price'])  !!} VNĐ</span>
 										</div>
-										<div class="pro-del"><a href="#"><i class="fa fa-times-circle"></i></a></div>
+										<div class="pro-del">
+											<a href="{{ url('xoa-san-pham/'.$item['rowId']) }}">
+												<i class="fa fa-times-circle"></i>
+											</a>
+										</div>
 									</div>
 									<div class="clear"></div>
-									<div class="cart-img-details">											
-										<div class="cart-img-photo">
-											<a href="#"><img src="{{ asset('public/back-end/img/cart_list_prod_2.jpg')}}" alt="" /></a>
-											<span class="quantity">1</span>
-										</div>
-										<div class="cart-img-contaent">
-											<a href="#"><h4>Aenean eu tristique</h4></a>
-											<span>$170.00</span>
-										</div>
-										<div class="pro-del"><a href="#"><i class="fa fa-times-circle"></i></a></div>
-									</div>
-									<p class="total">Subtotal: <span class="amount">$290.00</span></p>
+								@endforeach
+								@if(!empty($content))
+									<p class="total">
+										Tổng tiền: <span class="amount">{!! $total !!} VNĐ</span>
+									</p>
 									<div class="clear"></div>
-									<p class="cart-button-top"><a href="checkout.html">Checkout</a></p>
+									<p class="cart-button-top">
+										<a href="{!! url('thanh-toan') !!}">Thanh toán</a>
+									</p>
+								@endif
 								</div>
 							</div>
 							<!-- CART-PRODUCT-LIST END-->

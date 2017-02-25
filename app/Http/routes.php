@@ -45,12 +45,15 @@ Route::group(['namespace' => 'admin', 'prefix' => 'admin'], function()
 Route::get('/', ['as' =>'index','uses'=>'indexController@index']);
 Route::auth();
 Route::get('detail/{id}',['as' => 'detail','uses'=>'indexController@getDetail']);
-Route::get('view/{id}',['as' => 'quickview','uses'=>'indexController@quickview']);
+Route::get('xem-nhanh/{id}',['as' => 'quickview','uses'=>'indexController@index']);
 Route::get('the-loai/{id}/{alias}',['as' => 'category.view','uses'=>'indexController@detailCategory']);
 Route::get('chi-tiet/{id}/{alias}',['as' => 'detail.view','uses'=>'indexController@detailProduct']);
-Route::get('mua-hang/{id}/{alias}',['as' => 'buy.product','uses'=>'indexController@buyProduct']);
+Route::get('mua-hang/{id}/{size}',['as' => 'buy.product','uses'=>'indexController@buyProduct']);
 Route::get('gio-hang',['as' => 'cart','uses'=>'indexController@cart']);
 Route::get('xoa-san-pham/{id}',['as' => 'delete.product.cart','uses'=>'indexController@deleteProductCart']);
 Route::get('cap-nhat/{id}/{qty}',['as' => 'update.product.cart','uses'=>'indexController@updateProductCart']);
+
+Route::get('thanh-toan',['as' => 'payment','uses'=>'indexController@payment']);
+Route::get('luu-hoa-don',['as' => 'save.order','uses'=>'indexController@saveOrder']);
 
 

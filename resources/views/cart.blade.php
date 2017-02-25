@@ -20,6 +20,9 @@
 							
 							<form method="GET" acton="">
 								<input name="_token" type="hidden" id="token" value="{!! csrf_token() !!}">
+							@if(empty($content))
+								<?php echo "<h3>Bạn chưa có sản phẩm nào trong giỏ hàng</h3>";?>
+							@endif
 							@foreach($content as $item)
 							<tr>
 								<td class="align-center">{!! $index++ !!}</td>
@@ -52,10 +55,15 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
 						<div class="total_subtotal">
-								<div class="total">
-									<span>Tổng tiền:</span> {!! $total !!}
-									<span class="amount">{!! $total !!} vnđ</span>
+							<div class="total">
+								<span>Tổng tiền:</span> {!! $total !!}
+								@if(empty($content))
+								<div class="category_prod_card_area" id="payment">
+									<a href="{!! url('thanh-toan') !!}" class="add-text-lis">
+										<i class="fa fa-credit-card" aria-hidden="true"></i> Thanh toán
+									</a>
 								</div>
+								@endif
 							</div>
 						</div>
 					</div>

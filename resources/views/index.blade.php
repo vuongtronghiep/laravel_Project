@@ -27,7 +27,7 @@
 														<span class="addcart-text-del">{!! number_format(round(floor($seller['price']),-3)) !!} vnđ</span>
 													</div>
 													<div class="wish">
-														<a class="shopping-cart" href="#">
+														<a class="shopping-cart" href="{!! url('mua-hang/'.$seller["id"].'/'.$seller["product_name"]) !!}">
 															<i class="fa fa-shopping-cart"></i>
 														</a>
 														<a class="favourite" href="#">
@@ -39,11 +39,7 @@
 											<div class="infor-text">
 												<a href="product_details.html"><span>{!! $seller['product_name'] !!}</span></a>
 												<span class="star">
-													<i class="fa fa-star active"></i>
-													<i class="fa fa-star active"></i>
-													<i class="fa fa-star active"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
+													{!! $seller['view'] !!} Lượt xem
 												</span>
 											</div>
 										</div>
@@ -74,14 +70,19 @@
 														<img src="{{ asset('resources/upload/'. $spe['image'])}}" alt="Special" />
 													</div>
 												</a>
+												<a class="modal-view" href="{!! url('xem-nhanh/'.$spe["id"]) !!}" data-toggle="modal" data-target="#productModal">
+													<span class="quick-view">
+														<i class="fa fa-external-link"></i>Chi tiết
+													</span>
+												</a>
 												<div id="defaultCountdown"></div>
 												<div class="addtocart_area">
 													<div class="fet-price">
-														<span class="addcart-text">{!! number_format(round(floor($seller['afterSale']),-3)) !!}</span>
-														<span class="addcart-text-del">{!! number_format(round(floor($seller['price']),-3))!!}</span>
+														<span class="addcart-text">{!! number_format(round(floor($spe['afterSale']),-3)) !!}</span>
+														<span class="addcart-text-del">{!! number_format(round(floor($spe['price']),-3))!!}</span>
 													</div>
 													<div class="wish">
-														<a href="#" class="shopping-cart">
+														<a href="{!! url('mua-hang/'.$spe["id"].'/'.$spe["product_name"]) !!}" class="shopping-cart">
 															<i class="fa fa-shopping-cart"></i>
 														</a>
 														<a href="#" class="favourite">
@@ -92,11 +93,7 @@
 												<div class="infor-text">
 													<a href="product_details.html"><span>{!! $spe['product_name'] !!}</span></a>
 													<span class="star">
-														<i class="fa fa-star active"></i>
-														<i class="fa fa-star active"></i>
-														<i class="fa fa-star active"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
+														<p> {!! $spe['view'] !!} Lượt xem</p>
 													</span>
 												</div>
 											</div>
@@ -153,13 +150,18 @@
 													<img src="{{ asset('resources/upload/'. $new['image'])}}" alt="Special" class="primary-image"/>
 													<img src="{{ asset('resources/upload/'. $new['image_detail1'])}}" alt="Special" class="secondary-image"/>
 												</a>
+												<a class="modal-view" href="{!! url('xem-nhanh/'.$new["id"]) !!}" data-toggle="modal" data-target="#productModal">
+													<span class="quick-view">
+														<i class="fa fa-external-link"></i>Chi tiết
+													</span>
+												</a>
 												<div class="add-cart-area">
 													<div class="fet-price">
 														<span class="addcart-text">{!! number_format(round(floor($new['afterSale']),-3)) !!}</span>
 														<span class="addcart-text-del">{!! number_format(round(floor($new['price']),-3)) !!}</span>
 													</div>
 													<div class="wish">
-														<a href="#" class="shopping-cart">
+														<a href="{!! url('mua-hang/'.$new["id"].'/'.$new["product_name"]) !!}" class="shopping-cart">
 															<i class="fa fa-shopping-cart"></i>
 														</a>
 														<a href="#" class="favourite">
@@ -171,11 +173,7 @@
 											<div class="infor-text">
 												<a href="{!! url('chi-tiet/'.$new['id'].'/'.$new['product_name']) !!}"><span>{!! $new['product_name'] !!}</span></a>
 												<span class="star">
-													<i class="fa fa-star active"></i>
-													<i class="fa fa-star active"></i>
-													<i class="fa fa-star active"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i><br></br>
+													<p> {!! $new['view'] !!} Lượt xem</p>
 												</span>
 											</div>
 										</div>
@@ -195,13 +193,18 @@
 													<img src="{{ asset('resources/upload/'. $new['image'])}}" alt="Special" class="primary-image"/>
 													<img src="{{ asset('resources/upload/'. $new['image_detail1'])}}" alt="Special" class="secondary-image"/>
 												</a>
+												<a class="modal-view" href="{!! url('xem-nhanh/'.$new["id"]) !!}" data-toggle="modal" data-target="#productModal">
+													<span class="quick-view">
+														<i class="fa fa-external-link"></i>Chi tiết
+													</span>
+												</a>
 												<div class="add-cart-area">
 													<div class="fet-price">
 														<span class="addcart-text">{!! number_format(round(floor($new['afterSale']),-3)) !!}</span>
 														<span class="addcart-text-del">{!! number_format(round(floor($new['price']),-3)) !!}</span>
 													</div>
 													<div class="wish">
-														<a href="#" class="shopping-cart">
+														<a href="{!! url('mua-hang/'.$new["id"].'/'.$new["product_name"]) !!}" class="shopping-cart">
 															<i class="fa fa-shopping-cart"></i>
 														</a>
 														<a href="#" class="favourite">
@@ -213,11 +216,7 @@
 											<div class="infor-text">
 												<a href="{!! url('chi-tiet/'.$new['id'].'/'.$new['product_name']) !!}"><span>{!! $new['product_name'] !!}</span></a>
 												<span class="star">
-													<i class="fa fa-star active"></i>
-													<i class="fa fa-star active"></i>
-													<i class="fa fa-star active"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
+													<p> {!! $new['view'] !!} Lượt xem</p>
 												</span>
 											</div>
 										</div>
@@ -268,13 +267,18 @@
 													<img src="{{ asset('resources/upload/'. $new['image'])}}" alt="Special" class="primary-image"/>
 													<img src="{{ asset('resources/upload/'. $new['image_detail1'])}}" alt="Special" class="secondary-image"/>
 												</a>
+												<a class="modal-view" href="{!! url('xem-nhanh/'.$new["id"]) !!}" data-toggle="modal" data-target="#productModal">
+													<span class="quick-view">
+														<i class="fa fa-external-link"></i>Chi tiết
+													</span>
+												</a>
 												<div class="add-cart-area">
 													<div class="fet-price">
 														<span class="addcart-text">{!! number_format(round(floor($new['afterSale']),-3)) !!}</span>
 														<span class="addcart-text-del">{!! number_format(round(floor($new['price']),-3)) !!}</span>
 													</div>
 													<div class="wish">
-														<a href="#" class="shopping-cart">
+														<a href="{!! url('mua-hang/'.$new["id"].'/'.$new["product_name"]) !!}" class="shopping-cart">
 															<i class="fa fa-shopping-cart"></i>
 														</a>
 														<a href="#" class="favourite">
@@ -286,11 +290,7 @@
 											<div class="infor-text">
 												<a href="{!! url('chi-tiet/'.$new['id'].'/'.$new['product_name']) !!}"><span>{!! $new['product_name'] !!}</span></a>
 												<span class="star">
-													<i class="fa fa-star active"></i>
-													<i class="fa fa-star active"></i>
-													<i class="fa fa-star active"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
+													<p> {!! $new['view'] !!} Lượt xem</p>
 												</span>
 											</div>
 										</div>
@@ -315,13 +315,18 @@
 												<img src="{{ asset('resources/upload/'.$new['image'])}}" alt="Category" class="primary-image"/>
 												<img src="{{ asset('resources/upload/'.$new['image_detail1'])}}" alt="Category" class="secondary-image"/>
 											</a>
+											<a class="modal-view" href="{!! url('xem-nhanh/'.$new["id"]) !!}" data-toggle="modal" data-target="#productModal">
+												<span class="quick-view">
+													<i class="fa fa-external-link"></i>Chi tiết
+												</span>
+											</a>
 											<div class="add-cart-area">
 												<div class="fet-price">
 													<span class="addcart-text">{!! number_format(round(floor($new['afterSale']),-3)) !!}</span>
 													<span class="addcart-text-del">{!! number_format(round(floor($new['price']),-3)) !!}</span>
 												</div>
 												<div class="wish">
-													<a href="#" class="shopping-cart">
+													<a href="{!! url('mua-hang/'.$new["id"].'/'.$new["product_name"]) !!}" class="shopping-cart">
 														<i class="fa fa-shopping-cart"></i>
 													</a>
 													<a href="#" class="favourite">
@@ -333,11 +338,7 @@
 										<div class="infor-text">
 											<a href="{!! url('chi-tiet/'.$new['id'].'/'.$new['product_name']) !!}"><span>{!! $new['product_name'] !!}</span></a>
 											<span class="star">
-												<i class="fa fa-star active"></i>
-												<i class="fa fa-star active"></i>
-												<i class="fa fa-star active"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i><br><br>
+												<p> {!! $new['view'] !!} Lượt xem</p>
 											</span>
 										</div>
 									</div>
@@ -360,13 +361,18 @@
 												<img src="{{ asset('resources/upload/'.$new['image'])}}" alt="Category" class="primary-image"/>
 												<img src="{{ asset('resources/upload/'.$new['image_detail1'])}}" alt="Category" class="secondary-image"/>
 											</a>
+											<a class="modal-view" href="{!! url('xem-nhanh/'.$new["id"]) !!}" data-toggle="modal" data-target="#productModal">
+													<span class="quick-view">
+														<i class="fa fa-external-link"></i>Chi tiết
+													</span>
+												</a>
 											<div class="add-cart-area">
 												<div class="fet-price">
 													<span class="addcart-text">{!! number_format(round(floor($new['afterSale']),-3)) !!}</span>
 													<span class="addcart-text-del">{!! number_format(round(floor($new['price']),-3)) !!}</span>
 												</div>
 												<div class="wish">
-													<a href="#" class="shopping-cart">
+													<a href="{!! url('mua-hang/'.$new["id"].'/'.$new["product_name"]) !!}" class="shopping-cart">
 														<i class="fa fa-shopping-cart"></i>
 													</a>
 													<a href="#" class="favourite">
@@ -378,11 +384,7 @@
 										<div class="infor-text">
 											<a href="{!! url('chi-tiet/'.$new['id'].'/'.$new['product_name']) !!}"><span>{!! $new['product_name'] !!}</span></a>
 											<span class="star">
-												<i class="fa fa-star active"></i>
-												<i class="fa fa-star active"></i>
-												<i class="fa fa-star active"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i><br><br>
+												<p> {!! $new['view'] !!} Lượt xem</p>
 											</span>
 										</div>
 									</div>
@@ -404,13 +406,18 @@
 												<img src="{{ asset('resources/upload/'.$new['image'])}}" alt="Category" class="primary-image"/>
 												<img src="{{ asset('resources/upload/'.$new['image_detail1'])}}" alt="Category" class="secondary-image"/>
 											</a>
+											<a class="modal-view" href="{!! url('xem-nhanh/'.$new["id"]) !!}" data-toggle="modal" data-target="#productModal">
+												<span class="quick-view">
+													<i class="fa fa-external-link"></i>Chi tiết
+												</span>
+											</a>
 											<div class="add-cart-area">
 												<div class="fet-price">
 													<span class="addcart-text">{!! number_format(round(floor($new['afterSale']),-3)) !!}</span>
 													<span class="addcart-text-del">{!! number_format(round(floor($new['price']),-3)) !!}</span>
 												</div>
 												<div class="wish">
-													<a href="#" class="shopping-cart">
+													<a href="{!! url('mua-hang/'.$new["id"].'/'.$new["product_name"]) !!}" class="shopping-cart">
 														<i class="fa fa-shopping-cart"></i>
 													</a>
 													<a href="#" class="favourite">
@@ -422,11 +429,7 @@
 										<div class="infor-text">
 											<a href="{!! url('chi-tiet/'.$new['id'].'/'.$new['product_name']) !!}"><span>{!! $new['product_name'] !!}</span></a>
 											<span class="star">
-												<i class="fa fa-star active"></i>
-												<i class="fa fa-star active"></i>
-												<i class="fa fa-star active"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i><br><br>
+												<p> {!! $new['view'] !!} Lượt xem</p>
 											</span>
 										</div>
 									</div>
@@ -443,5 +446,7 @@
 			</div>
 		</div>
 	</div>
+	
 	<!-- MAINCONTAIN-AREA END-->
+	</div>
 @endsection

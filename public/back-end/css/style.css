@@ -3792,7 +3792,7 @@ padding-top: 1px;
 .modal-product .product-info {
     float: left;
     padding-left: 30px;
-    width: 60%;
+    width: 100%;
 }
 .modal-product .product-info h1 {
     font-size: 22px;

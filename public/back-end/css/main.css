@@ -335,8 +335,8 @@ textarea {
     min-height: 430px;
 }
 .category_prod_description {
-    min-height: 180px;
-    max-height: 180px;
+    min-height: 188px;
+    max-height: 188px;
 }
 .logo {
     height: 60px;
@@ -359,4 +359,15 @@ textarea {
 }
 .align-right {
     text-align: right;
+}
+.price_old_new1{
+    border-bottom: none !important;
+}
+.price_title{
+    font-size: 22px !important; 
+    margin-top: 10px;
+    width: 320px;
+}
+.price_old_new1 .old_price {
+    border-left: none !important;
 }

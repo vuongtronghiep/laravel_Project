@@ -15,6 +15,15 @@ $(function(){
       } 
     });
 
+	$(".cart1").click(function() {
+		var id = $(this).attr('id');
+		var size = $("#size option:selected").text();
+		var token = $('input[name=_token]').val();
+		alert(size);
+
+		
+	});
+
 	$(".updateCart").click(function() {
 		var rowId = $(this).attr('id');
 		var qty = $(this).parent().parent().find('.qty').val();
@@ -31,5 +40,9 @@ $(function(){
 				}
 			}
 		});
+	});
+
+	$("#quickview1").click(function(){
+		$("#quickview-wrapper").show();
 	});
 });

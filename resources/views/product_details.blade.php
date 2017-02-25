@@ -14,73 +14,84 @@
 						<div class="row">
 							<div class="col-lg-12 col-md-12">
 								<div class="category_single_list">
-								<div class="category_image cate_image">
-									<div class="larg_img">
-										<div class="tab-content">
-											<div class="tab-pane fade in active" id="image1">
-												<img src="{{ asset('resources/upload/'.$product->image) }}"  class="image_detail"/>
-											</div>
-											<div class="tab-pane fade" id="image2">
-												<img src="{{ asset('resources/upload/'.$product->image_detail1) }}" class="image_detail"/>
-											</div>
-											<div class="tab-pane fade" id="image3">
-												<img src="{{ asset('resources/upload/'.$product->image_detail2) }}" class="image_detail"/>
-											</div>
-											<div class="tab-pane fade" id="image4">
-												<img src="{{ asset('resources/upload/'.$product->image_detail3) }}" class="image_detail"/>
+									<div class="category_image cate_image">
+										<div class="larg_img">
+											<div class="tab-content">
+												<div class="tab-pane fade in active" id="image1">
+													<img src="{{ asset('resources/upload/'.$product->image) }}"  class="image_detail"/>
+												</div>
+												<div class="tab-pane fade" id="image2">
+													<img src="{{ asset('resources/upload/'.$product->image_detail1) }}" class="image_detail"/>
+												</div>
+												<div class="tab-pane fade" id="image3">
+													<img src="{{ asset('resources/upload/'.$product->image_detail2) }}" class="image_detail"/>
+												</div>
+												<div class="tab-pane fade" id="image4">
+													<img src="{{ asset('resources/upload/'.$product->image_detail3) }}" class="image_detail"/>
+												</div>
 											</div>
 										</div>
+										<div class="small_img">
+											<ul class="nav nav-tabs">
+												<li class="active">
+													<a href="#image1" data-toggle="tab"><img src="{{ asset('resources/upload/'.$product->image) }}" alt="" class="image_small_detail" /></a>
+												</li>
+												<li>
+													<a href="#image2" data-toggle="tab"><img src="{{ asset('resources/upload/'.$product->image_detail1) }}" class="image_small_detail" alt="" /></a>
+												</li>
+												<li>
+													<a href="#image3" data-toggle="tab"><img src="{{ asset('resources/upload/'.$product->image_detail2) }}" class="image_small_detail" alt="" /></a>
+												</li>
+												<li>
+													<a href="#image4" data-toggle="tab"><img src="{{ asset('resources/upload/'.$product->image_detail3) }}" class="image_small_detail" alt="" /></a>
+												</li>
+											</ul>
+										</div>
 									</div>
-									<div class="small_img">
-										<ul class="nav nav-tabs">
-											<li class="active">
-												<a href="#image1" data-toggle="tab"><img src="{{ asset('resources/upload/'.$product->image) }}" alt="" class="image_small_detail" /></a>
-											</li>
-											<li>
-												<a href="#image2" data-toggle="tab"><img src="{{ asset('resources/upload/'.$product->image_detail1) }}" class="image_small_detail" alt="" /></a>
-											</li>
-											<li>
-												<a href="#image3" data-toggle="tab"><img src="{{ asset('resources/upload/'.$product->image_detail2) }}" class="image_small_detail" alt="" /></a>
-											</li>
-											<li>
-												<a href="#image4" data-toggle="tab"><img src="{{ asset('resources/upload/'.$product->image_detail3) }}" class="image_small_detail" alt="" /></a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="category_text mrl15">
-									<div class="off_percent">-{!! $product->sale !!} %</div>
-									<div class="price_old_new">
-										<p>{!! number_format(round(floor($product->afterSale),-3)) !!} vnđ</p>
-										<p class="old_price"><del>{!! number_format(round(floor($product->price),-3)) !!} </del>vnđ</p>
-									</div>
-									<div class="category_prod_description">
-										<h3>{!! $product->product_name !!}</h3>
-										<p>{!! $product->detail !!}</p>
-									</div>
-									<div class="size_color">
-										<div class="size">
-											<label>Kích cỡ * &nbsp;&nbsp;&nbsp;</label>
-											@foreach($size as $size1)
-											<label class="checkbox-inline">
-												<input type="checkbox" id="ab" name="{!! $size1 !!}" value="{!! $size1 !!}">{!! $size1 !!}
-											</label>
-											@endforeach
+									<div class="category_text mrl15">
+										<div class="off_percent">-{!! $product->sale !!} %</div>
+										<div class="price_old_new">
+											<p>{!! number_format(round(floor($product->afterSale),-3)) !!} vnđ</p>
+											<p class="old_price"><del>{!! number_format(round(floor($product->price),-3)) !!} </del>vnđ</p>
 										</div>
 										
+										<div class="category_prod_description">
+											<div class="price_old_new price_old_new1">
+											 <p class="price_title"> {!! $product->product_name !!}</p>
+											 <p class="old_price old_price1">  {!! $product->view !!} Lượt xem </p>
+											</div>
+												<p>{!! $product->detail !!}</p>
+										</div>
+										<div class="size_color">
+											<div class="size">
+												<label>Size có sẵn: &nbsp;&nbsp;&nbsp;</label>{!! $product->size !!}
+											</div>
+										</div>
+										<div class="size_color">
+											<div class="size">
+												<label>Kích cỡ * &nbsp;&nbsp;&nbsp;</label>
+												<select name="size" >Chọn cỡ
+													<option value="S">S</option>
+													<option value="M">M</option>
+													<option value="L">L</option>
+													<option value="XL">XL</option>
+													<option value="XXL">XXL</option>
+												</select>
+											</div>
+										</div>
+										
+										<div class="category_prod_card_area">
+											<a href="{!! url('mua-hang/'.$product->id.'/'.$product->product_name) !!}" class="cart">
+												<i class="fa fa-shopping-cart"></i> Mua hàng
+											</a>
+											<a href="#" class="add-text-lis">
+												<i class="fa fa-credit-card" aria-hidden="true"></i> Thanh toán
+											</a>
+											<a href="#" class="heart">
+												<i class="fa fa-heart-o"> Yêu thích</i>
+											</a>
+										</div>
 									</div>
-									<div class="category_prod_card_area">
-										<a href="{!! url('mua-hang/'.$product->id.'/'.$product->product_name) !!}" class="cart">
-											<i class="fa fa-shopping-cart"></i> Mua hàng
-										</a>
-										<a href="#" class="add-text-lis">
-											<i class="fa fa-credit-card" aria-hidden="true"></i> Thanh toán
-										</a>
-										<a href="#" class="heart">
-											<i class="fa fa-heart-o"> Yêu thích</i>
-										</a>
-									</div>
-								</div>
 								</div>
 							</div>
 						</div>
@@ -161,7 +172,7 @@
 													<span class="addcart-text-del">{!! number_format(round(floor($item->price),-3)) !!} vnđ</span>
 												</div>
 												<div class="wish">
-													<a href="#">
+													<a href="{!! url('mua-hang/'.$item->id.'/'.$item->product_name) !!}">
 														<span class="cart">
 															<i class="fa fa-shopping-cart"></i>
 														</span>
@@ -177,11 +188,7 @@
 										<div class="infor-text">
 											<a href="product_details.html"><span>{!! $item->product_name !!}</span></a>
 											<span class="star">
-												<i class="fa fa-star active"></i>
-												<i class="fa fa-star active"></i>
-												<i class="fa fa-star active"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
+												{!! $item->view !!} Lượt xem
 											</span>
 										</div>
 									</div>

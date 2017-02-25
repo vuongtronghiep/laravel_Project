@@ -137,6 +137,20 @@ class indexModel extends Model{
 			   });
 	}
 
+	/*tăng lượt xem*/
+	public function incView($id, $data) {
+        DB::table('product')
+            ->where('id',$id)
+            ->update($data);
+	}
+
+	/*search product theo id*/
+	public function showProduct($id){
+		return DB::table('product')
+			   ->where('id', $id)
+			   ->get();
+	}
+
 }
 
 ?>
